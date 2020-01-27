@@ -59,11 +59,11 @@ console.log(
 // #3 Filter the output array from #2.
 function oldOnesOnly(arr) {
 	/* your code here
-	var filterArr = [];
+	/*var filterArr = [];
 
 	for(x of arr)
 	{
-		if(x.age > 55)
+		if(x.age > 50)
 		{
 			filterArr.push(x.age);
 		}

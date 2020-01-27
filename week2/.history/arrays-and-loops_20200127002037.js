@@ -63,7 +63,7 @@ function oldOnesOnly(arr) {
 
 	for(x of arr)
 	{
-		if(x.age > 55)
+		if(x.age > 50)
 		{
 			filterArr.push(x.age);
 		}

@@ -11,9 +11,13 @@
 
 import {of} from 'rxjs';
 
-export const source = of(["Airbus", "Bell", "Agusta", "Robinson"]);
+export const source = of(newFunction());
 
 source.subscribe(helicopters => 
     {
         console.log(helicopters);
     });
+
+function newFunction() {
+    return ["Airbus", "Bell", "Agusta", "Robinson"];
+}

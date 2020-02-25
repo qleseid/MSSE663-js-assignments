@@ -8,11 +8,23 @@
  * - Then Hoist the callback function.
  *
  */
-const things = ['thing1', 'thing2'];
+export const things = ['thing1', 'thing2'];
 
 // create callback here
-
+export const mapCall = (pos: number, callBack: string) =>
+{
+    let ret = {id: (pos + 1), name: callBack};
+    return ret;
+}
 // create map here
+export const mapped = (toMap: Array<any>) =>
+{
+    let resultMap = new Array<any>();
+    resultMap = toMap.map(m => mapCall(toMap.indexOf(m), m));
+    return resultMap;
+}
+
+console.log(mapped(things));
 
 /**
  * #2 Higher order then curry.
@@ -23,3 +35,16 @@ const things = ['thing1', 'thing2'];
  */
 
 // create function here
+export const filterFunc = (key: string) => (toFil: Array<any>) =>
+{
+    let resultFilter = new Array<any>();
+    let num: number = parseInt(key);
+
+    resultFilter = toFil.filter((e,i) =>
+    {
+        return (e.id === num);
+    });
+    return resultFilter;
+};
+
+console.log(filterFunc("1")(mapped(things)))
